@@ -5,7 +5,16 @@
 **Module:** SDEV2004 – Software for the Global Market
 
 ---
+## Setup and Execution Instructions
 
+**Requirements:** Python 3.10+, pip
+
+0. Navigate into the project folder: `cd "Beauty Page"`
+1. Install dependencies: `pip install -r requirements.txt`
+2. Compile translations: `pybabel compile -d translations`
+3. Run the app: `python run.py`
+4. Open `http://127.0.0.1:5000` in your browser. Use the EN, ES and 日本語 buttons in the header to switch locale.
+5. 
 ## Project Overview
 
 For this project I built a culturally adaptive product page for a fictional skincare brand called Glow. The website allows users to browse and discover different skincare products made for their skin. I built the application using Flask and Jinja2. It adapts its layout, content, colours, imagery, navigation and language depending on which locale the user selects. My target area is adults and teenagers interested in skincare and beauty.
@@ -158,17 +167,6 @@ Japanese users see a customer reviews section with star ratings and two buyer qu
 
 **Hypothesis 3 — Detailed product information (JA only):**
 Japanese users also see a four-column information grid covering the full ingredient list, step-by-step usage instructions, skin type suitability and a results claim backed by a statistic. This section doesn't appear for EN/ES users at all. It's there because neutral cultures place much more weight on factual evidence than emotional appeal when deciding whether to trust a product.
-
----
-
-## Setup and Execution Instructions
-
-**Requirements:** Python 3.10+, pip
-
-1. Install dependencies: `pip install -r requirements.txt`
-2. Compile translations: `pybabel compile -d translations`
-3. Run the app: `python run.py`
-4. Open `http://127.0.0.1:5000` in your browser. Use the EN, ES and 日本語 buttons in the header to switch locale.
 
 ---
 
