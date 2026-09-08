@@ -1,0 +1,193 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Glow Skincare\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-05-04 20:17+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: app/templates/base.html:11
+msgid "Glow Skincare"
+msgstr "Glow Cuidado de la Piel"
+
+#: app/templates/base.html:26 app/templates/base.html:32
+msgid "Home"
+msgstr "Inicio"
+
+#: app/templates/base.html:27
+msgid "Products"
+msgstr "Productos"
+
+#: app/templates/base.html:28 app/templates/product.html:83
+msgid "Ingredients"
+msgstr "Ingredientes"
+
+#: app/templates/base.html:29
+msgid "Reviews"
+msgstr "Reseñas"
+
+#: app/templates/base.html:33
+msgid "Shop"
+msgstr "Tienda"
+
+#: app/templates/base.html:34
+msgid "About"
+msgstr "Sobre Nosotros"
+
+#: app/templates/base.html:52
+msgid "© 2026 Glow Skincare. All rights reserved."
+msgstr "© 2026 Glow Cuidado de la Piel. Todos los derechos reservados."
+
+#: app/templates/product.html:8
+msgid "Glow Serum – Glow Skincare"
+msgstr "Sérum Glow – Glow Cuidado de la Piel"
+
+#: app/templates/product.html:18
+msgid "Find Your Perfect Glow"
+msgstr "Encuentra Tu Brillo Perfecto"
+
+#: app/templates/product.html:19
+msgid "Skincare made for you. Discover what works for your skin."
+msgstr "Cuidado de la piel hecho para ti. Descubre lo que funciona para tu piel."
+
+#: app/templates/product.html:20 app/templates/product.html:42
+#: app/templates/product.html:48 app/templates/product.html:54
+msgid "Shop Now"
+msgstr "Comprar Ahora"
+
+#: app/templates/product.html:25 app/templates/product.html:127
+msgid "Glow Vitamin C Serum"
+msgstr "Sérum de Vitamina C Glow"
+
+#: app/templates/product.html:26
+msgid "A clinically tested serum for brighter, healthier skin."
+msgstr "Un sérum clínicamente probado para una piel más luminosa y saludable."
+
+#: app/templates/product.html:27
+msgid "View Product Details"
+msgstr "Ver Detalles del Producto"
+
+#: app/templates/product.html:36
+msgid "Recommended For You"
+msgstr "Recomendado Para Ti"
+
+#: app/templates/product.html:40
+msgid "Vitamin C Serum"
+msgstr "Sérum de Vitamina C"
+
+#: app/templates/product.html:41
+msgid "Brightens and evens skin tone"
+msgstr "Ilumina y unifica el tono de la piel"
+
+#: app/templates/product.html:46
+msgid "Hydrating Moisturiser"
+msgstr "Hidratante Nutritivo"
+
+#: app/templates/product.html:47
+msgid "Deep hydration for all skin types"
+msgstr "Hidratación profunda para todo tipo de piel"
+
+#: app/templates/product.html:52
+msgid "SPF 50 Sunscreen"
+msgstr "Protector Solar SPF 50"
+
+#: app/templates/product.html:53
+msgid "Daily protection with a lightweight feel"
+msgstr "Protección diaria con una textura ligera"
+
+#: app/templates/product.html:63
+msgid "What's your skin type?"
+msgstr "¿Cuál es tu tipo de piel?"
+
+#: app/templates/product.html:65
+msgid "Oily"
+msgstr "Grasa"
+
+#: app/templates/product.html:66
+msgid "Dry"
+msgstr "Seca"
+
+#: app/templates/product.html:67
+msgid "Combination"
+msgstr "Mixta"
+
+#: app/templates/product.html:68
+msgid "Sensitive"
+msgstr "Sensible"
+
+#: app/templates/product.html:80
+msgid "Product Information"
+msgstr "Información del Producto"
+
+#: app/templates/product.html:84
+#, fuzzy
+msgid ""
+"Vitamin C (15 percent), Hyaluronic Acid, Niacinamide, Aloe Vera Extract, "
+"Zinc PCA"
+msgstr ""
+"Vitamina C (15%), Ácido Hialurónico, Niacinamida, Extracto de Aloe Vera, "
+"Zinc PCA"
+
+#: app/templates/product.html:87
+msgid "How to Use"
+msgstr "Cómo Usar"
+
+#: app/templates/product.html:88
+msgid ""
+"Apply 2–3 drops to cleansed skin each morning. Follow with moisturiser "
+"and SPF."
+msgstr ""
+"Aplica 2-3 gotas sobre la piel limpia cada mañana. Continúa con "
+"hidratante y SPF."
+
+#: app/templates/product.html:91
+msgid "Skin Type"
+msgstr "Tipo de Piel"
+
+#: app/templates/product.html:92
+msgid "Suitable for all skin types. Dermatologist tested."
+msgstr "Apto para todo tipo de piel. Probado por dermatólogos."
+
+#: app/templates/product.html:95
+msgid "Results"
+msgstr "Resultados"
+
+#: app/templates/product.html:96
+#, fuzzy
+msgid "94 percent of users reported brighter skin after 4 weeks."
+msgstr ""
+"El 94% de los usuarios reportaron una piel más luminosa después de 4 "
+"semanas."
+
+#: app/templates/product.html:102
+msgid "Customer Reviews"
+msgstr "Reseñas de Clientes"
+
+#: app/templates/product.html:105
+msgid "\"This serum changed my skin completely. I trust this product.\""
+msgstr "\"Este sérum cambió mi piel completamente. Confío en este producto.\""
+
+#: app/templates/product.html:109
+msgid "\"Very detailed ingredient list. I felt confident purchasing.\""
+msgstr "\"Lista de ingredientes muy detallada. Me sentí seguro al comprarlo.\""
+
+#: app/templates/product.html:121
+msgid "⭐ Best Seller Loved by our community"
+msgstr ""
+
+#: app/templates/product.html:129
+msgid "30ml – Brightening &amp; Anti-aging"
+msgstr "30ml – Iluminador y Antiedad"
+
+#: app/templates/product.html:130
+msgid "Add to Bag"
+msgstr "Añadir a la Bolsa"
+

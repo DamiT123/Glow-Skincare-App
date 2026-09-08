@@ -1,0 +1,56 @@
+<!--
+    Author: Oluwadamilola Tinubu - C24344666
+    base.html - Base template using Jinja2 inheritance
+    All pages extend this template for consistent structure
+-->
+<!DOCTYPE html>
+<html lang="{{ locale }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% trans %}Glow Skincare{% endtrans %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Apply cultural colour scheme class to body based on locale -->
+    <!-- This supports Hypothesis 1 (bold colours for ES) and Hypothesis 2 (soft for JA) -->
+</head>
+<body class="scheme-{{ config.colour_scheme }}">
+
+    <header>
+        <div class="header-inner">
+            <h1 class="brand">✨ Glow</h1>
+
+            <!-- Navigation - adapts based on cultural layout style -->
+            <nav>
+                {% if config.layout_style == 'structured' %}
+                    <!-- Japanese: guided navigation with clear labelled sections -->
+                    <a href="{{ url_for('main.index') }}">{% trans %}Home{% endtrans %}</a>
+                    <a href="#">{% trans %}Products{% endtrans %}</a>
+                    <a href="#">{% trans %}Ingredients{% endtrans %}</a>
+                    <a href="#">{% trans %}Reviews{% endtrans %}</a>
+                {% else %}
+                    <!-- EN/ES: simple visual navigation -->
+                    <a href="{{ url_for('main.index') }}">{% trans %}Home{% endtrans %}</a>
+                    <a href="#">{% trans %}Shop{% endtrans %}</a>
+                    <a href="#">{% trans %}About{% endtrans %}</a>
+                {% endif %}
+            </nav>
+
+            <!-- Language switcher -->
+            <div class="lang-switcher">
+                <a href="{{ url_for('main.set_lang', lang='en') }}" class="{{ 'active' if locale == 'en' }}">EN</a>
+                <a href="{{ url_for('main.set_lang', lang='es') }}" class="{{ 'active' if locale == 'es' }}">ES</a>
+                <a href="{{ url_for('main.set_lang', lang='ja') }}" class="{{ 'active' if locale == 'ja' }}">日本語</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>{% trans %}© 2026 Glow Skincare. All rights reserved.{% endtrans %}</p>
+    </footer>
+
+</body>
+</html>

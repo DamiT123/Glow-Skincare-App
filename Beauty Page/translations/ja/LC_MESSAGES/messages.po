@@ -1,0 +1,185 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Glow Skincare\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-05-04 20:17+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: app/templates/base.html:11
+msgid "Glow Skincare"
+msgstr "グロー スキンケア"
+
+#: app/templates/base.html:26 app/templates/base.html:32
+msgid "Home"
+msgstr "ホーム"
+
+#: app/templates/base.html:27
+msgid "Products"
+msgstr "製品"
+
+#: app/templates/base.html:28 app/templates/product.html:83
+msgid "Ingredients"
+msgstr "成分"
+
+#: app/templates/base.html:29
+msgid "Reviews"
+msgstr "レビュー"
+
+#: app/templates/base.html:33
+msgid "Shop"
+msgstr "ショップ"
+
+#: app/templates/base.html:34
+msgid "About"
+msgstr "について"
+
+#: app/templates/base.html:52
+msgid "© 2026 Glow Skincare. All rights reserved."
+msgstr "© 2026 グロー スキンケア。無断転載を禁じます。"
+
+#: app/templates/product.html:8
+msgid "Glow Serum – Glow Skincare"
+msgstr "グロー セラム – グロー スキンケア"
+
+#: app/templates/product.html:18
+msgid "Find Your Perfect Glow"
+msgstr "グロー ビタミン C セラム"
+
+#: app/templates/product.html:19
+msgid "Skincare made for you. Discover what works for your skin."
+msgstr "臨床試験済みの美肌・健康肌のためのセラムです。"
+
+#: app/templates/product.html:20 app/templates/product.html:42
+#: app/templates/product.html:48 app/templates/product.html:54
+msgid "Shop Now"
+msgstr "今すぐ購入"
+
+#: app/templates/product.html:25 app/templates/product.html:127
+msgid "Glow Vitamin C Serum"
+msgstr "グロー ビタミン C セラム"
+
+#: app/templates/product.html:26
+msgid "A clinically tested serum for brighter, healthier skin."
+msgstr "臨床試験済みの美肌・健康肌のためのセラムです。"
+
+#: app/templates/product.html:27
+msgid "View Product Details"
+msgstr "製品詳細を見る"
+
+#: app/templates/product.html:36
+msgid "Recommended For You"
+msgstr "おすすめ商品"
+
+#: app/templates/product.html:40
+msgid "Vitamin C Serum"
+msgstr "ビタミン C セラム"
+
+#: app/templates/product.html:41
+msgid "Brightens and evens skin tone"
+msgstr "肌を明るくし、肌トーンを均一にします"
+
+#: app/templates/product.html:46
+msgid "Hydrating Moisturiser"
+msgstr "保湿クリーム"
+
+#: app/templates/product.html:47
+msgid "Deep hydration for all skin types"
+msgstr "すべての肌タイプに深い潤いを"
+
+#: app/templates/product.html:52
+msgid "SPF 50 Sunscreen"
+msgstr "SPF50 日焼け止め"
+
+#: app/templates/product.html:53
+msgid "Daily protection with a lightweight feel"
+msgstr "軽いつけ心地で毎日紫外線から守ります"
+
+#: app/templates/product.html:63
+msgid "What's your skin type?"
+msgstr ""
+
+#: app/templates/product.html:65
+msgid "Oily"
+msgstr ""
+
+#: app/templates/product.html:66
+msgid "Dry"
+msgstr ""
+
+#: app/templates/product.html:67
+msgid "Combination"
+msgstr ""
+
+#: app/templates/product.html:68
+msgid "Sensitive"
+msgstr ""
+
+#: app/templates/product.html:80
+msgid "Product Information"
+msgstr "製品情報"
+
+#: app/templates/product.html:84
+msgid ""
+"Vitamin C (15 percent), Hyaluronic Acid, Niacinamide, Aloe Vera Extract, "
+"Zinc PCA"
+msgstr "ビタミンC（15%%）、ヒアルロン酸、ナイアシンアミド、アロエベラエキス、亜鉛PCA"
+
+#: app/templates/product.html:87
+msgid "How to Use"
+msgstr "使い方"
+
+#: app/templates/product.html:88
+msgid ""
+"Apply 2–3 drops to cleansed skin each morning. Follow with moisturiser "
+"and SPF."
+msgstr "毎朝洗顔後の肌に2〜3滴なじませます。その後、保湿クリームとSPFをお使いください。"
+
+#: app/templates/product.html:91
+msgid "Skin Type"
+msgstr "肌タイプ"
+
+#: app/templates/product.html:92
+msgid "Suitable for all skin types. Dermatologist tested."
+msgstr "全肌タイプ対応。皮膚科医によるテスト済み。"
+
+#: app/templates/product.html:95
+msgid "Results"
+msgstr "効果"
+
+#: app/templates/product.html:96
+msgid "94 percent of users reported brighter skin after 4 weeks."
+msgstr "94%%のユーザーが4週間後に肌の明るさを実感しました。"
+
+#: app/templates/product.html:102
+msgid "Customer Reviews"
+msgstr "お客様のレビュー"
+
+#: app/templates/product.html:105
+msgid "\"This serum changed my skin completely. I trust this product.\""
+msgstr "「このセラムで肌が劇的に変わりました。信頼できる商品です。」"
+
+#: app/templates/product.html:109
+msgid "\"Very detailed ingredient list. I felt confident purchasing.\""
+msgstr "「成分表示がとても詳しく、安心して購入できました。」"
+
+#: app/templates/product.html:121
+msgid "⭐ Best Seller Loved by our community"
+msgstr "⭐ ベストセラー みんなに愛されています"
+
+#: app/templates/product.html:129
+msgid "30ml – Brightening &amp; Anti-aging"
+msgstr "30ml – 美白・エイジングケア"
+
+#: app/templates/product.html:130
+msgid "Add to Bag"
+msgstr "バッグに追加"
+

@@ -1,0 +1,171 @@
+<!--
+    Author: Oluwadamilola Tinubu - C24344666
+    product.html - Main product page with cultural adaptations
+    Extends base.html and adapts layout based on locale and cultural config object.
+
+    Cultural dimensions applied:
+    - Affective/Neutral (Hall): controls hero style, colour scheme, imagery and language tone
+    - Individualism/Collectivism (Hofstede): controls content sections shown per locale
+
+    EN/ES: Affective + Individualist -> emotional hero, personalised recommendations, skin quiz
+    JA:    Neutral + Collectivist    -> product-focused hero, detailed info, reviews, best seller badge
+-->
+{% extends 'base.html' %}
+
+{% block title %}{% trans %}Glow Serum – Glow Skincare{% endtrans %}{% endblock %}
+
+{% block content %}
+
+<!-- ── Hero Section ──────────────────────────────────────────────────────
+     Affective (EN/ES): large lifestyle image, emotional personalised headline
+     Hypothesis 1: Affective users respond to emotional, personal language
+     Neutral (JA): smaller hero, product name as headline, clinical language
+     Hypothesis 2: Neutral users prefer factual, direct product information
+     Image switches based on config.image_style (lifestyle vs product)
+─────────────────────────────────────────────────────────────────────── -->
+<section class="hero {{ 'hero-visual' if config.layout_style == 'visual' else 'hero-structured' }}" style="background-image: url('{{ url_for('static', filename='images/hero-lifestyle.png' if config.image_style == 'lifestyle' else 'images/hero-product.png') }}'); background-size: cover; background-position: center;">
+    {% if config.image_style == 'lifestyle' %}
+        <!-- EN/ES hero: emotional, personalised headline supports Affective/Individualist hypothesis -->
+        <div class="hero-text">
+            <h2>{% trans %}Find Your Perfect Glow{% endtrans %}</h2>
+            <p>{% trans %}Skincare made for you. Discover what works for your skin.{% endtrans %}</p>
+            <a href="#" class="btn-primary">{% trans %}Shop Now{% endtrans %}</a>
+        </div>
+    {% else %}
+        <!-- JA hero: product name as headline, clinical subtext supports Neutral hypothesis -->
+        <div class="hero-text">
+            <h2>{% trans %}Glow Vitamin C Serum{% endtrans %}</h2>
+            <p>{% trans %}A clinically tested serum for brighter, healthier skin.{% endtrans %}</p>
+            <a href="#" class="btn-primary">{% trans %}View Product Details{% endtrans %}</a>
+        </div>
+    {% endif %}
+</section>
+
+<!-- ── Personalised Recommendations Section ──────────────────────────────
+     Shown for EN/ES only (config.show_recommendations = True)
+     Hypothesis 1: Individualist users respond to personalised product suggestions
+     addressed directly to them ("Recommended For You") rather than community picks
+─────────────────────────────────────────────────────────────────────── -->
+{% if config.show_recommendations %}
+<section class="recommendations">
+    <h3>{% trans %}Recommended For You{% endtrans %}</h3>
+    <div class="product-grid">
+        <!-- Each card uses lifestyle product imagery consistent with Affective dimension -->
+        <div class="product-card">
+            <img src="{{ url_for('static', filename='images/serum.png') }}" class="product-img">
+            <h4>{% trans %}Vitamin C Serum{% endtrans %}</h4>
+            <p>{% trans %}Brightens and evens skin tone{% endtrans %}</p>
+            <a href="#" class="btn-secondary">{% trans %}Shop Now{% endtrans %}</a>
+        </div>
+        <div class="product-card">
+            <img src="{{ url_for('static', filename='images/moisturiser.png') }}" class="product-img">
+            <h4>{% trans %}Hydrating Moisturiser{% endtrans %}</h4>
+            <p>{% trans %}Deep hydration for all skin types{% endtrans %}</p>
+            <a href="#" class="btn-secondary">{% trans %}Shop Now{% endtrans %}</a>
+        </div>
+        <div class="product-card">
+            <img src="{{ url_for('static', filename='images/sunscreen.png') }}" class="product-img">
+            <h4>{% trans %}SPF 50 Sunscreen{% endtrans %}</h4>
+            <p>{% trans %}Daily protection with a lightweight feel{% endtrans %}</p>
+            <a href="#" class="btn-secondary">{% trans %}Shop Now{% endtrans %}</a>
+        </div>
+    </div>
+</section>
+
+    <!-- Skin type quiz - supports Individualism hypothesis (EN/ES only)
+         Invites users to personalise their experience based on their individual skin type.
+         Directly addresses the user as an individual ("What's YOUR skin type?")
+         This interaction pattern would be inappropriate for JA (collectivist context) -->
+    <section class="skin-quiz">
+        <div class="quiz-inner">
+            <p>{% trans %}What's your skin type?{% endtrans %}</p>
+            <div class="quiz-options">
+                <a href="#" class="quiz-btn">{% trans %}Oily{% endtrans %}</a>
+                <a href="#" class="quiz-btn">{% trans %}Dry{% endtrans %}</a>
+                <a href="#" class="quiz-btn">{% trans %}Combination{% endtrans %}</a>
+                <a href="#" class="quiz-btn">{% trans %}Sensitive{% endtrans %}</a>
+            </div>
+        </div>
+    </section>
+
+{% endif %}
+
+<!-- ── Detailed Product Information Section ──────────────────────────────
+     Shown for JA only (config.show_detailed_info = True)
+     Hypothesis 2: Neutral users trust products backed by clinical/factual detail
+     Hypothesis 3: Collectivist users rely on social proof (reviews) to make decisions
+     Ingredient transparency and usage instructions build trust in neutral cultures
+─────────────────────────────────────────────────────────────────────── -->
+{% if config.show_detailed_info %}
+<section class="detailed-info">
+    <h3>{% trans %}Product Information{% endtrans %}</h3>
+    <!-- Info grid: clinical detail supports Neutral dimension - facts over emotion -->
+    <div class="info-grid">
+        <div class="info-block">
+            <!-- Full ingredient list - transparency builds trust in collectivist/neutral cultures -->
+            <h4>{% trans %}Ingredients{% endtrans %}</h4>
+            <p>{% trans %}Vitamin C (15 percent), Hyaluronic Acid, Niacinamide, Aloe Vera Extract, Zinc PCA{% endtrans %}</p>
+        </div>
+        <div class="info-block">
+            <!-- Step-by-step usage - structured guidance aligns with Neutral cultural preference -->
+            <h4>{% trans %}How to Use{% endtrans %}</h4>
+            <p>{% trans %}Apply 2–3 drops to cleansed skin each morning. Follow with moisturiser and SPF.{% endtrans %}</p>
+        </div>
+        <div class="info-block">
+            <!-- Dermatologist tested claim - authority and credibility important in neutral cultures -->
+            <h4>{% trans %}Skin Type{% endtrans %}</h4>
+            <p>{% trans %}Suitable for all skin types. Dermatologist tested.{% endtrans %}</p>
+        </div>
+        <div class="info-block">
+            <!-- Statistical results - data-driven proof supports Neutral dimension -->
+            <h4>{% trans %}Results{% endtrans %}</h4>
+            <p>{% trans %}94 percent of users reported brighter skin after 4 weeks.{% endtrans %}</p>
+        </div>
+    </div>
+
+    <!-- Customer Reviews - supports Collectivism hypothesis (JA)
+         Collectivist users rely heavily on community validation before purchasing.
+         Showing what others think reduces individual risk and builds group trust. -->
+    <div class="reviews">
+        <h4>{% trans %}Customer Reviews{% endtrans %}</h4>
+        <div class="review-card">
+            <span class="stars">★★★★★</span>
+            <p>{% trans %}"This serum changed my skin completely. I trust this product."{% endtrans %}</p>
+        </div>
+        <div class="review-card">
+            <span class="stars">★★★★☆</span>
+            <p>{% trans %}"Very detailed ingredient list. I felt confident purchasing."{% endtrans %}</p>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- ── Main Product Detail ────────────────────────────────────────────────
+     Visible for all locales - core product information
+     Product image switches between lifestyle (EN/ES) and minimal (JA)
+     to maintain cultural consistency with the rest of the page
+     Currency adapts per locale: EUR for EN/ES, JPY for JA
+─────────────────────────────────────────────────────────────────────── -->
+<section class="product-main">
+    {% if locale == 'ja' %}
+    <!-- Best seller badge - supports Collectivism hypothesis (JA only)
+         Japanese consumers are influenced by community validation.
+         Highlighting that a product is community-loved reduces purchase uncertainty. -->
+    <div class="bestseller-banner">
+        <span>{% trans %}⭐ Best Seller Loved by our community{% endtrans %}</span>
+    </div>
+    {% endif %}
+    <div class="product-detail">
+        <!-- Product image: minimal white background for JA (Neutral), lifestyle shot for EN/ES (Affective) -->
+        <img src="{{ url_for('static', filename='images/product-main-ja.png' if locale == 'ja' else 'images/product-main.png') }}" class="product-img-large">
+        <div class="product-info">
+            <h3>{% trans %}Glow Vitamin C Serum{% endtrans %}</h3>
+            <!-- Currency localisation: JPY for Japan, EUR for ES/EN -->
+            <p class="price">{{ '¥3,200' if locale == 'ja' else '€29,99' if locale == 'es' else '€29.99' }}</p>
+            <p>{% trans %}30ml – Brightening &amp; Anti-aging{% endtrans %}</p>
+            <a href="#" class="btn-primary">{% trans %}Add to Bag{% endtrans %}</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
