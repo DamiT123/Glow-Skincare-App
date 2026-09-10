@@ -16,6 +16,10 @@
 3. Run the app: `python run.py`
 4. Open `http://127.0.0.1:5000` in your browser. Use the EN, ES and 日本語 buttons in the header to switch locale.
 
+**Or Use This Link:**
+https://glow-skincare-app.onrender.com
+It may take 30 to 60 seconds to load.
+
 ## Project Overview
 
 For this project I built a culturally adaptive product page for a fictional skincare brand called Glow. The website allows users to browse and discover different skincare products made for their skin. I built the application using Flask and Jinja2. It adapts its layout, content, colours, imagery, navigation and language depending on which locale the user selects. My target area is adults and teenagers interested in skincare and beauty.
